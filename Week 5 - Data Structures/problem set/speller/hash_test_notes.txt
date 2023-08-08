@@ -1,0 +1,66 @@
+Hashing Algorithm attemps/results:
+
+Hash 1- 1 letter hash (return ascii value of first character of word)
+- Creates a lot of collisions as shown in the check result.
+
+WORDS MISSPELLED:     5440
+WORDS IN DICTIONARY:  143091
+WORDS IN TEXT:        17756
+TIME IN load:         0.02
+TIME IN check:        0.58
+TIME IN size:         0.00
+TIME IN unload:       0.00
+TIME IN TOTAL:        0.60
+
+Hash 2 - two letters (return ascii value of first and second character of word)
+- Reduced the amount of collisions.
+- Requires check for word length & whether second character is alphabetical.
+
+WORDS MISSPELLED:     2497
+WORDS IN DICTIONARY:  143091
+WORDS IN TEXT:        17756
+TIME IN load:         0.03
+TIME IN check:        0.40
+TIME IN size:         0.00
+TIME IN unload:       0.00
+TIME IN TOTAL:        0.42
+
+Hash 3 - Sum of all character ascii values in input word
+- reduced collisions further
+- still has collisions due to permutations i.e. abc = 3 cba = 3
+
+WORDS MISSPELLED:     955
+WORDS IN DICTIONARY:  143091
+WORDS IN TEXT:        17756
+TIME IN load:         0.03
+TIME IN check:        0.23
+TIME IN size:         0.00
+TIME IN unload:       0.01
+TIME IN TOTAL:        0.27
+
+
+Hash 4 - get ascii value current char & multiply by current index to reduce collisions i.e. abc = 0x0 + 1x2 + 2x2 = 6 vs cba = 0x2 + 1x1 + 2x0 = 1
+- still creates collisions
+
+WORDS MISSPELLED:     955
+WORDS IN DICTIONARY:  143091
+WORDS IN TEXT:        17756
+TIME IN load:         0.03
+TIME IN check:        0.05
+TIME IN size:         0.00
+TIME IN unload:       0.02
+TIME IN TOTAL:        0.11
+
+Hash 5 - multiplying each by power of 27 (a-z)
+- creates a unique ascii value for each word
+- make n a prime number
+- still not happy with this as it feels like i'm throwing memory at it inefficiently
+
+WORDS MISSPELLED:     955
+WORDS IN DICTIONARY:  143091
+WORDS IN TEXT:        17756
+TIME IN load:         0.03
+TIME IN check:        0.03
+TIME IN size:         0.00
+TIME IN unload:       0.02
+TIME IN TOTAL:        0.08
