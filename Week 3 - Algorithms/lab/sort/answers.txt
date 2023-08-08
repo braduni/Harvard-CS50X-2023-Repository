@@ -1,0 +1,63 @@
+sort1 uses: Bubble sort
+How do you know?: It was most efficient when sorting the sorted data because it has a condition that allows it to break out early. Least efficient when sorting reversed array as required
+to swap every element.
+
+sort2 uses: Merge sort
+How do you know?: this was going to be the most efficient sort (n log n) compared to the other two sorts 0(n2). Sorting random data hightlighted this.
+
+sort3 uses: Selection sort
+How do you know?: It was the least efficient when sorting already sorted arrays. It is more efficient than sort1(bubble sort) when sorting reversed arrays as it keeps track of the lowest index
+and swaps after the nested loop ends rather than after each iteration.
+
+
+// Initial thoughts
+Merge sort (n log n) will be more efficient than the other two here 0(n2).
+
+sort1 results:
+random5000 = real 0m0.103s
+random10000 = real 0m0.385s
+random50000 = real 0m7.815s
+
+sort2 results:
+random5000 = real 0m0.034s
+random10000 = real 0m0.058s
+random50000 = real 0m0.810s
+
+sort3 results:
+random5000 = real 0m0.078s
+random10000 = real 0m0.249s
+random50000 = real 0m3.261s
+
+Bubble sort will be most efficient (n) with the sorted data because it will only need one pass to determine that the list is sorted. Selection sort will be least efficient 0(n2)
+
+sort1 results:
+sorted 5k = real 0m0.026s
+sorted 10k = real 0m0.066s
+sorted 50k = real 0m0.427s
+
+sort2 results:
+sorted 5k = real 0m0.041s
+sorted 10k = real 0m0.063s
+sorted 50k = real 0m0.488s
+
+sort3 results:
+sorted 5k = real 0m0.071s
+sorted 10k = real 0m0.182s
+sorted 50k = real 0m2.966s
+
+Although bubble sort and selection sort will be 0(n2) for reversed data, selection sort will be more efficient as it requires fewer swaps. Merge sort will be fastest here (n log n).
+
+sort1 results:
+reversed5000 = real 0m0.089s
+reversed10000 = real 0m0.277s
+reversed50000 = real 0m5.737s
+
+sort2 results:
+reversed5000 = real 0m0.045s
+reversed10000 = real 0m0.159s
+reversed50000 = real 0m0.369s
+
+sort3 results:
+reversed5000 = real 0m0.049s
+reversed10000 = real 0m0.183s
+reversed50000 real 0m3.166s
