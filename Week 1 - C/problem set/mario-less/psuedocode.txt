@@ -1,0 +1,4 @@
+Prompt user for height value
+Validate input is integer value between 1 and 8 otherwise go to step one.
+Iterate from 1 to height value incrementing by 1.
+    With each iteration print height value in hashes + newline.
